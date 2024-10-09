@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BOXCINEMAS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="mainForm">
+      <h3>CINES UNIDOS</h3>
+      <table id="mainForm_tabla">
+       <input type="text" id="mainForm_inCantDinero" placeholder="Dinero Inicial de Caja"></input>
+       <button id="mainForm_btAceptar">Aceptar</button> 
+        <tr>
+          <th>Familia</th>
+          <th>Personas</th>
+          <th>Día</th>
+          <th>Monto a Pagar</th>
+        </tr>
+      </table>
+      <h5>Familia que pagó más Bs: <span id="mainForm_lblDevolverFamilia"></span></h5>
+      <h5>Promedio pagado los días lunes: $<span id="mainForm_lblPromedioLunes"></span></h5>
+      <h5>Total de dinero al final de la jornada: $<span id="mainForm_lblDineroCaja"></span></h5>
+      <button id="mainForm_btAgregar">Agregar Familia</button>
+    </section>
+
+    <section id="familiaForm">
+      <h3>Datos de la Familia</h3>
+      <input type="text" id="familiaForm_inApellido" placeholder="Nombre"></input>
+      <input type="text" id="familiaForm_inPersona" placeholder="Cantidad de Personas"></input>
+      <input type="text" id="familiaForm_inDia" placeholder="Dia"></input>
+      <button id="familiaForm_btAceptar">Aceptar</button> 
+    </section>
+  </body>
+  <script type="module">
+    import Cl_controlador from "./js/Cl_controlador.js";
+    new Cl_controlador()
+ </script>
+</html>
