@@ -7,6 +7,14 @@ export default class Cl_mCine {
         this.cantDinero = cantDinero;
         this.acumTotal = 0.0;
     }
+
+    set cantDinero(cantDinero){
+        this._cantDinero = +cantDinero;
+    }
+    get cantDinero(){
+        return this._cantDinero;
+    }
+
     procesarFamilia(familia){
         this.acumTotal += familia.Pago();
     if (familia.dia == 1){
@@ -25,6 +33,6 @@ export default class Cl_mCine {
         return this.acumDiaLunes / this.contDias;
     }
     dineroCaja(){
-        return this.cantDinero - ( - this.acumTotal);
+        return this.cantDinero + this.acumTotal;
     }
 }
